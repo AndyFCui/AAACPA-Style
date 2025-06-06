@@ -63,14 +63,7 @@ The theme supports customization through CSS variables in `stylesheets/applicati
 - Typography settings
 - Layout spacing
 - Component styling
-
-## Screenshots
-
-![Overview](screenshots/TW-Style-redmine-overview.png)
-![Issues](screenshots/TW-Style-redmine-issue.png)
-![Issue List](screenshots/TW-Style-redmine-issueList.png)
-![Gantt Chart](screenshots/TW-Style-redmine-gantt.png)
-
+  
 ## Requirements
 
 - Redmine 4.1 or higher
