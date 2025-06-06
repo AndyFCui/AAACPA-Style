@@ -1,0 +1,393 @@
+/**
+ * TW-Style theme version 2.2.0, Copyright (C) 2024 Tomy Shen
+ *
+ * Author: Tomy Shen (tomy843012@hotmail.com)
+ * Website: https://redmine-tw.net
+ * @2024-05-16
+ * @license https://opensource.org/license/mit/
+ *
+ */
+
+@import url("normalize.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("../../../stylesheets/application.css");
+
+#top-menu li { padding-right: 5px; }
+#top-menu a  { font-weight: unset; }
+#header { background-color: white; min-height: 4.4em;box-shadow: 0px 5px 10px -5px lightgray; }
+#header h1 {
+    color: black;
+    margin-top: 5px;
+    font-family: -apple-system, "Microsoft JhengHei", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+#header a { color: black; }
+#quick-search { margin-top: 8px; }
+button.tab-left, button.tab-right { border: 0; border-radius: 0; } /* Main-menu extend button */
+#main-menu li a { color: black; font-weight:normal; border-bottom: 3px solid transparent; }
+#main-menu li a:hover { background: #fff; color: black; border-bottom: 3px solid #628DB6; }
+#main-menu li a.new-object { background-color: transparent; }
+#main-menu li a.new-object:hover { background: #fff; color: black; border-bottom: 3px solid transparent; }
+#main-menu li a.selected, #main-menu li a.selected:hover { background: #628DB6; color: white; border-bottom: 0 solid transparent; border-radius: 50em; }
+#main-menu .menu-children li a { border-bottom: 3px solid transparent; }
+#main-menu .menu-children li a:hover { border-bottom: 3px solid transparent; }
+#main       { border-top: 1px solid lightgray; }
+#sidebar    { background: white; }
+#projects-index { column-width: unset; -webkit-column-width: unset; margin:-5px; }
+#projects-index ul.projects.root { display: flex ;flex-wrap: wrap; }
+#projects-index ul.projects li.root { box-shadow: 0 3px 9px rgba(0,0,0,.2); border-radius: 0px; margin: 8px; width: calc(25% - 10px); }
+#projects-index a.icon-user.icon-bookmarked-project { background-image: url(icons/bookmarked-project.png), url(icons/user.png); }
+#history .tab-content { padding: 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.07); border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; }
+#content .tabs ul li a { border: 1px solid transparent; }
+#footer::after { content:"\A TW-Style - Theme designed by tomy from Redmine-TW © 2023-2024"; white-space: pre-wrap; }
+#login-form { border: 1px solid transparent; background-color: transparent; }
+input#login-submit { color: white; background: #3E5B76; border: 0px; }
+#login-form input#username, #login-form input#password { border-top: 0px; border-left: 0px; border-right: 0px; border-radius: 0px; }
+
+body { font-size: 14px; }
+table { border-spacing: 0; border-collapse: collapse; }
+table.list, .table-list { border-collapse: collapse; line-height: 22px; }
+table.list th a, table.list .table-list-header a { color: #212136; }
+table.list th, .table-list-header { background-color: transparent; border-bottom: 1px solid lightgray; padding-bottom: 8px; }
+table.list th.activity, table.list th.assigned_to, table.list th.attachments, table.list th.author, table.list th.category, table.list th.comments, table.list th.description, table.list th.fixed_version, table.list th.last_notes, table.list th.last_updated_by, table.list th.name, table.list th.parent-subject, table.list th.priority, table.list th.relations, table.list th.roles, table.list th.status, table.list th.string, table.list th.subject, table.list th.text, table.list th.tracker, table.list th.user, table.list td.activity, table.list td.assigned_to, table.list td.attachments, table.list td.author, table.list td.category, table.list td.comments, table.list td.description, table.list td.fixed_version, table.list td.last_notes, table.list td.last_updated_by, table.list td.name, table.list td.parent-subject, table.list td.priority, table.list td.relations, table.list td.roles, table.list td.status, table.list td.string, table.list td.subject, table.list td.text, table.list td.tracker, table.list td.user {
+    text-align: left;
+}
+table.list:not(.odd-even) tbody tr:nth-child(odd):hover, .odd:hover, #issue-changesets div.changeset:nth-child(odd):hover, table.list:not(.odd-even) tbody tr:nth-child(even):hover, .even:hover, #issue-changesets div.changeset:nth-child(even):hover {
+    background-color: #FEFBE7;
+}
+table.list td { padding-top: 3px; padding-bottom: 3px; } /* Issue list */
+table.issues td { padding-top: 4px; padding-bottom: 4px; }
+table.list table.progress td, table.progress td { padding-top: 2px; padding-bottom: 2px; }
+
+table.boards a.board { background: url(icons/icon-forum.png) no-repeat 0% 50%; }
+div.issue { padding:20px; margin-top: 2px; background: cornsilk; box-shadow: 0 3px 9px rgba(0,0,0,.2); }
+div#history { margin-top: 18px; }
+div#replies { padding-left: 28px; }
+a.atom { background-image: url(icons/feed.png); padding-top: 4px; padding-left: 18px; }
+legend { margin-left: 8px; }
+
+#project-jump .drdn-trigger { padding-left: 10px; background: #fff url(icons/Arrow_down.png) no-repeat 97% 50%; border-radius: 25px; }
+#project-jump .drdn-content { padding: 2px; margin-top: 4px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+input.autocomplete { background: #fff url(icons/magnifier.png) no-repeat 4px 50%; padding-left:24px !important; }
+
+.box              { border-radius: 8px; padding: 12px; }
+.nodata, .warning { background-color: #fff3cd; border-color: #ffecb5; }
+
+/* Submit button */
+input[type="submit"] { background-color: #4169E1; color: #FFF; border: none; padding: 0 12px; border: 1px solid #A7C7E7; }
+input[type="submit"]:hover { background-color: #A7C7E7; }
+/* Button style */
+.contextual > :not(:first-child) { margin-left: 3px; }
+.contextual  .icon.icon-zoom-out, .icon.icon-zoom-in {
+  padding-left: 26px;
+  padding-right: 10px;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  vertical-align: middle;
+  background-color: whitesmoke;
+  border-radius: 3px;
+  background-position: 15% 50%;
+}
+/* Badge */
+.badge { padding: 2px 5px; font-size: 11px; }
+/* Icons */
+.icon-add               { background-image: url(icons/add.png); }
+.icon-checked           { background-image: url(icons/check.png); }
+.icon-reload            { background-image: url(icons/reload.png); }
+.icon-save              { background-image: url(icons/save.png); }
+.icon-time-add          { background-image: url(icons/time-add.png); }
+.icon-settings          { background-image: url(icons/settings.png); }
+.icon-bookmark          { background-image: url(icons/bookmark.png); }
+.icon-bookmark-off      { background-image: url(icons/bookmark-off.png); }
+.icon-edit              { background-image: url(icons/edit.png); }
+.icon-group             { background-image: url(icons/group.png); }
+.icon-help              { background-image: url(icons/help.png); }
+.icon-user              { background-image: url(icons/user.png); }
+.icon-time              { background-image: url(icons/time.png); }
+.icon-list              { background-image: url(icons/list.png); }
+.icon-del               { background-image: url(icons/del.png); }
+.icon-import            { background-image: url(icons/import.png); }
+.icon-copy              { background-image: url(icons/copy.png); }
+.icon-copy-link         { background-image: url(icons/copy-link.png); }
+.icon-view              { background-image: url(icons/view.png) !important; }
+.icon-lock              { background-image: url(icons/lock.png); }
+.icon-locked            { background-image: url(icons/lock.png); }
+.icon-zoom-in           { background-image: url(icons/zoom-in.png); }
+.icon-zoom-out          { background-image: url(icons/zoom-out.png); }
+.icon-sort-handle       { background-image: url(icons/sort-handle.png); }
+.icon-download          { background-image: url(icons/download.png); }
+.icon-attachment        { background-image: url(icons/attachment.png); }
+.icon-history           { background-image: url(icons/history.png); }
+.icon-comment           { background-image: url(icons/comment.png); }
+.icon-email-add         { background-image: url(icons/email-add.png); }
+.icon-passwd            { background-image: url(icons/passwd.png); }
+.icon-news              { background-image: url(icons/news.png); }
+.icon-projects          { background-image: url(icons/project.png); }
+.icon-package           { background-image: url(icons/package.png); }
+.icon-issue             { background-image: url(icons/issue.png); }
+.icon-issue-edit        { background-image: url(icons/issue-edit.png); }
+.icon-workflows         { background-image: url(icons/workflows.png); }
+.icon-plugins           { background-image: url(icons/plugins.png); }
+.icon-roles             { background-image: url(icons/roles.png); }
+.icon-custom-fields     { background-image: url(icons/custom-fields.png); }
+.icon-bookmarked-project{ background-image: url(icons/bookmarked-project.png); }
+
+/* Website LOGO */
+div#top-menu {
+    background-image: var(--custom-logo-url, url("icons/AAACPA.png"));
+    background-repeat: no-repeat;
+    background-position: 10px 48%;
+    padding-left: 100px;
+}
+/* Responsive RWD */
+@media screen and (max-width: 899px) {
+    #header { background-color: #5B7493 !important; }
+    .flyout-menu { background-color: #628DB6 !important; }
+    .flyout-menu h3 { background-color: #003153 !important; }
+}
+@media screen and (min-width: 1181px) {
+    #projects-index ul.projects li.root { width: calc(25% - 18px); }
+}
+@media screen and (max-width: 1180px) {
+    #projects-index ul.projects li.root { width: calc(33.333% - 18px); }
+}
+@media screen and (max-width: 888px) {
+    #projects-index ul.projects li.root { width: calc(50% - 18px); }
+}
+@media screen and (max-width: 600px) {
+    #projects-index ul.projects li.root { width: calc(100% - 12px); }
+}
+
+
+/* Page transition */
+#main {
+    animation: fadeInAnimation ease-in-out 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Global */
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, "Microsoft YaHei", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+/* Top MENU #5B7493 */
+#top-menu { background-color: #5B7493; font-size: 1em; padding: 6px 14px; height: unset; line-height: 1.8em }
+#top-menu a { text-decoration:none; }
+#top-menu a:hover { color: #ebe9f4; text-decoration: none; }
+/* Search Bar */
+#quick-search form label a { visibility: hidden; position: sticky; }
+#quick-search form label a::after {
+    visibility: visible;
+    font-family: FontAwesome; 
+    font-size: 16px; 
+    display: inline-block; 
+    content: '\f002';
+    top: 0;
+    left: 0;
+}
+#quick-search form { margin-right: 4px; }
+#quick-search #q { margin-left: -34px; border-radius: 25px; }
+#quick-search #project-jump { box-shadow: 0 0px 3px rgba(0,0,0,.1);border-radius: 25px; }
+input#q.small { padding-left: 28px; box-shadow: 0 0px 3px rgba(0,0,0,.1); } /* dialog cursor position */
+#quick-search #q:focus { border: 1px solid darkgray; } 
+/* Priority */
+.autoscroll table.list .priority-highest { background-color: #FFD3D3 } 
+.autoscroll table.list .priority-highest:hover { background-color: #FEFBE7 }
+.autoscroll table.list .priority-high2 { background-color: #FFE1E1 }
+.autoscroll table.list .priority-high2:hover { background-color: #FEFBE7 }
+.autoscroll table.list .priority-high3 { background-color: #FFEEEE }
+.autoscroll table.list .priority-high3:hover { background-color: #FEFBE7 }
+.autoscroll table.list .priority-lowest { background-color: #EAF7FF }
+.autoscroll table.list .priority-lowest:hover { background-color: #FEFBE7 }
+tr.time-entry td.issue a.issue {
+    padding: 2px 8px;
+    border: 1px solid lightgray;
+    margin-right: 4px;
+}
+
+/* Fix reply subject bug */
+input#message_subject, input#document_title, input#issue_subject, input#news_title, textarea#news_summary {
+    width: 100%; max-width: 100%;
+}
+
+/* compatible for normal.css */
+div.issue .attribute .value { overflow: visible; }
+[type="checkbox"], [type="radio"] { margin-left: 4px; margin-right: 4px; }
+
+/* Forum setting table borderless*/
+table.list, .table-list { border:0 }
+
+/* Popup window style */
+div.modal { border-radius:0 ; padding: 0 0 4px 0; }
+.ui-widget.ui-widget-content { border: unset; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { border-top-right-radius: unset; }
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {border-top-left-radius: unset; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { border-bottom-left-radius: unset; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { border-bottom-right-radius: unset; }
+.ui-widget-header { background: #628DB6; border: unset; color: #fff; }
+button.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close { border-radius: 50%; }
+.ui-dialog .ui-dialog-titlebar-close { right: 0.4em; }
+/* Settings section */
+#content .tabs ul li a { font-weight: unset; }
+#content .tabs ul li a.selected { font-weight: bold; color: #169; }
+.tabular label { font-weight: unset; }
+.box legend { font-weight: bold; }
+/* Overview module */
+.mypage-box {
+    padding: 12px;
+    background-color: #f6f6f6;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.07);
+}
+/* Activity module */
+div#activity h3 { background-color: transparent; margin-bottom: 0px; }
+div#activity dd .description, #search-results dd .description { font-style: normal; }
+div#activity dl {
+    margin-left: 0px;
+    padding: 0px 20px;
+    background-color: #f6f6f6;
+    border: 1px solid #e4e4e4;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top: 2px;
+}
+/* Roadmap percentage bar */ 
+#roadmap { margin-left: 10px; }
+table.progress td:first-child { border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
+table.progress td:last-child { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
+table.progress td.closed { background: #00c600 none repeat scroll 0%; }
+.version-overview table.progress td, table.progress td { height: .5em; }
+/* Calendar module */
+table.cal          { border: 0 !important; border-width: 0px !important; } /* Table border */
+table.cal thead th { background-color: transparent !important; padding-bottom: 8px !important; } /* Table top row */
+table.cal td.week-number { border: 0 none !important; background-color: transparent !important; } /* Table left column */
+table.cal td       { border: 1px solid #e3e5ec !important; } /* every td border */
+table.cal td.today { background: cornsilk !important; } /* Today's background color */
+
+ul.cal             { border: 0; } /* compatible with Redmine 5.1 */
+.cal .calbody      { margin-right: -1px; margin-top: -1px; border-bottom: 1px solid #d7d7d7; border-right: 1px solid #d7d7d7; }
+.cal .week-number  { background-color: transparent; }
+.cal .calhead      { background-color: transparent; margin-bottom: 4px; }
+.cal div.issue     { padding:unset; background: white;padding: 4px; }
+/* Documents module */
+#document-list .document-group { padding: 18px 18px 0 18px; margin-bottom: 2px; }
+.document-item { padding-bottom: 10px; padding-top: 8px; padding-left: 16px; margin-left: 32px; border-left: 2px dashed lightgray; }
+.document-item .updated_on em { padding-left: 20px; font-weight: bold; }
+.document-item h4.title { padding-bottom: 10px; font-size: 15px; font-weight: 300; }
+.document-item h4.title a {
+    background-image: url(icons/attachment.png);;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+/* News module */
+article.news-article {
+    padding: 18px;
+    background-color: #f6f6f6;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.07);
+    margin-bottom: 15px;
+}
+h3.comments {
+    padding-top: 2px;
+    padding-bottom: 3px;
+    background-image: url(icons/comment.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+/* Gantt moudle */
+.task_late { background: #f66; }
+.task_done { background: #00c600; }
+/* Wiki module */
+div.wiki h1, div.wiki .h1, div.wiki h2, div.wiki .h2, div.wiki h3, div.wiki .h3, div.wiki h4, div.wiki .h4, div.wiki h5, div.wiki .h5, div.wiki h6, div.wiki .h6 {
+    margin-top: 1.1em; margin-bottom: 0.25em; font-weight: 300;
+}
+div.wiki h1, div.wiki .h1 {
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #dadce6;
+    font-size: 2.45em;
+    line-height: 1.2;
+}
+div.wiki h2, div.wiki .h2 {
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #dadce6;
+    font-size: 1.75em;
+    line-height: 1.225;
+}
+div.wiki h3, div.wiki .h3 { padding-bottom: .2em; font-size: 1.25em; font-weight: 500; }
+div.wiki .toc { line-height: unset; padding: 10px 18px 14px 18px; border-radius: 15px; font-size: 1em; }
+div.wiki ul.toc a { font-size: 1.25em; }
+div.wiki ul.toc a:hover { text-decoration: none; }
+div.wiki ul.toc {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    background-color: #f9fafb;
+    border: 1px solid #e3e5ec;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+/* Forum module */
+p.breadcrumb { font-size: 1.05em; }
+table.messages th, table.messages td { text-align: left; padding: 2px 2px 2px 20px; } 
+table.boards th { text-align: left; padding-left: 8px;} 
+table.boards td { text-align: left; padding-left: 18px;} 
+blockquote {
+    border-left: 4px solid #3498db;
+    margin: 0 0 8px;
+    padding: 2px 12px;
+    color: gray;
+}
+/* Plugin redmine-agile */
+body .issue-card { background-color: cornsilk; box-shadow: 0 3px 9px rgba(0,0,0,.2); }
+div.agile-board.autoscroll { background-color: whitesmoke; }
+.agile-board table.list.issues-board tbody tr { background-color: whitesmoke !important; }
+.planning-board .column-header { text-align: center; }
+.planning-board { background-color: whitesmoke; }
+/* Plugin additionals */
+.active-dashboards ul,.recently-updated ,.dashboards { max-height: 100%; }
+#sidebar a.dashboard.selected { line-height: 1.7em; padding: 3px 12px 4px 11px; background-color: #C8C8C8; border-radius: 18px; }
+a.dashboard { line-height: 1.7em; padding: 3px 12px 4px 11px; margin-left: -2px; }
+/* Plugin local_avatars */
+body.avatars-on div.journal h4 img.gravatar { margin-left: -32px; }
+body.avatars-off div.journal h4 img.gravatar { margin-left: 0px; }
+img.gravatar, div.gravatar-with-child > img.gravatar:nth-child(2) { 
+    border-radius: 160px; -moz-border-radius: 160px; -webkit-border-radius: 160px;
+}
+/* Collapsible sidebar toggle  */
+#main #sidebar { padding: 20px 20px; }
+#sidebar {
+    will-change: margin;
+    transition: margin .5s;
+    flex: 0 0 250px;
+    order: -1;
+}
+#sidebar.sidebar-hidden { display: none; }
+#sidebar.sidebar-hiding { margin-right: -291px; }
+.sidebar-toggler.sidebar-hidden { background-image: url(icons/ArrowBack.png); }
+.sidebar-toggler {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    bottom: -3px;
+    width: 14px;
+    height: 16px;
+    transform: translateY(100%);
+    background-position: center;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    right: 0;
+    background-image: url(icons/ArrowForward.png);
+}
+
+/* 2024-0402 wiki行間距、字體顏色 */
+.wiki.wiki-page { font-size: 1.1em; font-weight: 400; }
+div.wiki { color: #121212; line-height: 1.5; }
